@@ -1,0 +1,21 @@
+<%- include("../header"); %>
+<div class="col-8">
+    <h1>Agregar producto</h1>
+    <form method="post" action="/products/add">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input required id="name" placeholder="Nombre del producto" class="form-control" type="text"
+                name="name">
+        </div>
+        <div class="form-group">
+            <label for="price">Price</label>
+            <input required id="preci" placeholder="Precio del producto" class="form-control" type="number"
+                name="price">
+        </div>
+        <div class="form-group">
+            <button class="btn btn-success">Save</button>
+            &nbsp;<a href="/products" class="btn btn-primary">back</a>
+        </div>
+    </form>
+</div>
+<%- include("../footer"); %>

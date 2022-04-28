@@ -1,0 +1,34 @@
+<%- include("../header"); %>
+<div class="col-8">
+    <h1>Products</h1>
+    <a href="/products/add" class="btn btn-primary mb-2">Add a product</a>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% products.forEach(product => { %>
+            <tr>
+                <td><%= product.name %></td>
+                <td><%= product.price %></td>
+                <td>
+                    <a href="/products/edit/<%= product.id %>" class="btn btn-warning">
+                        Edit
+                    </a>
+                </td>
+                <td>
+                    <a href="/products/remove/<%= product.id %>" class="btn btn-danger">
+                        Delete
+                    </a>
+                </td>
+            </tr>
+            <% })%>
+        </tbody>
+    </table>
+</div>
+<%- include("../footer"); %>
