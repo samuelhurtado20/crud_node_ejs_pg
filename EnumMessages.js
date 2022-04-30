@@ -8,7 +8,7 @@ const EnumMessages = {
     code: 1
   },
   MissingParameterId: {
-    message: 'missing parameter: id should be a number',
+    message: 'missing parameter: "id" should be a number',
     code: 2
   },
   UserNotFound: {

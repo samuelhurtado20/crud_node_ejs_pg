@@ -8,9 +8,7 @@ router.get('/', function (req, res, next) {
   productsModel
     .get()
     .then((products) => {
-      res.render('products/show', {
-        products: products
-      })
+      res.render('products/show', { products: products })
     })
     .catch((err) => {
       console.log(err)
